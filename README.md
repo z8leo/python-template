@@ -64,3 +64,5 @@ Set poetry to use in-project virtual environments:
 
 This project uses semantic-release for versioning. Commit message convention:
 https://www.conventionalcommits.org/en/v1.0.0/
+
+
