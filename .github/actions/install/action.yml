@@ -17,5 +17,5 @@ runs:
         # https://github.com/actions/setup-python/blob/main/docs/advanced-usage.md#caching-packages
         cache: 'poetry'
 
-    - run: poetry install
+    - run: poetry install --with dev
       shell: bash
