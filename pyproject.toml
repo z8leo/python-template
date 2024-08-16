@@ -1,0 +1,45 @@
+[tool.poetry]
+name = "python-template"
+version = "0.1.0"
+description = "Python Project Reference Template"
+authors = ["Leonhard Zacharias <leonhard.zacharias@gmail.com>"]
+readme = "README.md"
+
+packages = [
+    { include = "python-template", from = "src" }
+]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.2"
+pre-commit = "^3.8.0"
+ruff = "^0.5.7"
+mypy = "^1.11.1"
+pytest-testmon = "^2.1.1"
+pdoc = "^14.6.0"
+python-semantic-release = "^9.8.6"
+
+[tool.ruff.lint]
+# pyflakes, pycodestyle, isort
+select = ["F", "E", "W", "I001"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+
+[tool.ruff.format]
+docstring-code-format = true
+
+[tool.semantic_release]
+version_toml = [
+    "pyproject.toml:tool.poetry.version"
+]
+branch = "main"
+upload_to_PyPI = false
+upload_to_release = true
+build_command = "poetry build"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

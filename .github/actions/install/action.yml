@@ -1,0 +1,21 @@
+name: 'Install'
+description: 'Checkout repository, setup Python, install Poetry, isntall dependencies, and cache dependencies'
+inputs:
+  python-version:
+    description: 'Python version to use'
+    required: true
+runs:
+  using: 'composite'
+  steps:
+    - name: Install poetry
+      run: pipx install poetry
+      shell: bash
+
+    - uses: actions/setup-python@v5
+      with:
+        python-version: ${{ inputs.python-version }}
+        # https://github.com/actions/setup-python/blob/main/docs/advanced-usage.md#caching-packages
+        cache: 'poetry'
+
+    - run: poetry install
+      shell: bash
