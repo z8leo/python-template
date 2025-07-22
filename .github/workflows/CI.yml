@@ -29,7 +29,7 @@ jobs:
           python-version: 3.11
 
       - name: Run pre-commit hooks
-        run: poetry run pre-commit run --all-files
+        run: uv run pre-commit run --all-files
 
   tests:
     runs-on: ubuntu-latest
@@ -44,7 +44,7 @@ jobs:
           python-version: 3.11
 
       - name: Run tests
-        run: poetry run pytest
+        run: uv run pytest
 
   docs:
     runs-on: ubuntu-latest
@@ -59,7 +59,7 @@ jobs:
           python-version: 3.11
 
       - name: Generate documentation
-        run: poetry run pdoc src/python-template -o ./docs
+        run: uv run pdoc src/python-template -o ./docs
 
   release:
     runs-on: ubuntu-latest
@@ -79,9 +79,9 @@ jobs:
       - name: Semantic Release Version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: poetry run semantic-release -vv --strict version
+        run: uv run semantic-release -vv --strict version
 
       - name: Python Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: poetry run semantic-release -vv --strict publish
+        run: uv run semantic-release -vv --strict publish
