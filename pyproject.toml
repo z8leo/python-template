@@ -37,6 +37,8 @@ branch = "main"
 upload_to_PyPI = false
 upload_to_release = true
 build_command = "uv build"
+changelog_file = "CHANGELOG.md"
+changelog_sections = "feature,fix,breaking,documentation,performance,refactor"
 
 [build-system]
 requires = ["hatchling"]
