@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.0.4 (2025-07-22)
+
+### Bug Fixes
+
+- Lockfile ([#8](https://github.com/z8leo/python-template/pull/8),
+  [`7ac6be0`](https://github.com/z8leo/python-template/commit/7ac6be0f242330d52db0d5a772bc77b13a4c69f2))
+
+
 ## v1.0.3 (2025-07-22)
 
 ### Bug Fixes
