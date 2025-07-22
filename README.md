@@ -3,8 +3,7 @@ A minimal best-practice template for python projects.
 This is mainly a reference for myself, but feel free to use it as a starting point for your own projects.
 
 # Tools
-- `pyenv` for managing python versions
-- `poetry` for packaging and dependency management
+- `uv` for managing virtual envs, dependency management and packaging
 - `ruff` for linting and formatting
 - `mypy` for type checking
 - `pytest` for testing
@@ -15,17 +14,9 @@ This is mainly a reference for myself, but feel free to use it as a starting poi
 
 # Prerequisits
 
-## Install pyenv
-Pyenv is a tool that lets you manage multiple versions of python on your system.
-https://github.com/pyenv/pyenv
-
-## Install poetry
-Poetry is a Python dependency management and packaging tool.
-https://python-poetry.org/docs/
-
-Set poetry to use in-project virtual environments:
-
-    poetry config virtualenvs.in-project true
+## Install uv
+`uv` is an extremely fast Python package and project manager
+https://docs.astral.sh/uv/getting-started/installation/
 
 ## Recommended VSCode Plugins:
 - Python
@@ -40,16 +31,11 @@ Set poetry to use in-project virtual environments:
 
 ## Install dependencies
 
-    poetry install --with dev
-
-## Activate virtual environment
-
-    poetry shell
+    uv sync --extra dev
 
 ## Install pre-commit hooks
 
     pre-commit install
-    pre-commit install --hook-type commit-msg
 
 ## Run pre-commit hooks
 
