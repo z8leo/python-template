@@ -85,9 +85,9 @@ jobs:
       - name: Semantic Release Version
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run semantic-release -vv --strict version
+        run: uv run semantic-release -vv version
 
       - name: Python Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run semantic-release -vv --strict publish
+        run: uv run semantic-release -vv publish
