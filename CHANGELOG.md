@@ -2,6 +2,14 @@
 
 <!-- version list -->
 
+## v1.1.0 (2025-07-22)
+
+### Features
+
+- Simplify cicd ([#9](https://github.com/z8leo/python-template/pull/9),
+  [`11d2045`](https://github.com/z8leo/python-template/commit/11d20455ee40e7c251be72438dd6423afe6bb1b9))
+
+
 ## v1.0.4 (2025-07-22)
 
 ### Bug Fixes
