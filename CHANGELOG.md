@@ -2,6 +2,23 @@
 
 <!-- version list -->
 
+## v1.1.1 (2025-07-23)
+
+### Bug Fixes
+
+- Ci ([#12](https://github.com/z8leo/python-template/pull/12),
+  [`09ba79f`](https://github.com/z8leo/python-template/commit/09ba79f757c3f356964fc173073739801324dad9))
+
+- Ci ([#11](https://github.com/z8leo/python-template/pull/11),
+  [`b6cbfd3`](https://github.com/z8leo/python-template/commit/b6cbfd378dadd470cfcd5473f71055a4f45500c3))
+
+- Doc generation ([#10](https://github.com/z8leo/python-template/pull/10),
+  [`8cfc2da`](https://github.com/z8leo/python-template/commit/8cfc2da520d0d9ea5bdd6db7648352b75525869d))
+
+- Improve logging ([#10](https://github.com/z8leo/python-template/pull/10),
+  [`8cfc2da`](https://github.com/z8leo/python-template/commit/8cfc2da520d0d9ea5bdd6db7648352b75525869d))
+
+
 ## v1.1.0 (2025-07-22)
 
 ### Features
