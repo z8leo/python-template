@@ -42,7 +42,7 @@ jobs:
         run: uv run pytest
 
       - name: Generate documentation
-        run: uv run pdoc src/python-template -o ./docs
+        run: uv run pdoc src/python_template -o ./docs
         # TODO: docs must be commited
 
       - name: Python Semantic Release
