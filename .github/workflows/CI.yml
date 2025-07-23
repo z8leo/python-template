@@ -45,7 +45,12 @@ jobs:
         run: uv run pdoc src/python_template -o ./docs
         # TODO: docs must be commited
 
+      - name: Semantic Release Version
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: uv run semantic-release -vv version
+
       - name: Python Semantic Release
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: uv run semantic-release version --push
+        run: uv run semantic-release -vv publish
