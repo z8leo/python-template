@@ -20,7 +20,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
+          ref: ${{ github.head_ref || github.ref_name }}
 
       - name: Install uv
         uses: astral-sh/setup-uv@v4
@@ -42,7 +42,7 @@ jobs:
         run: uv run pytest
 
       - name: Generate documentation
-        run: uv run pdoc src/python-template -o ./docs
+        run: uv run pdoc src/python_template -o ./docs
         # TODO: docs must be commited
 
       - name: Python Semantic Release

@@ -4,7 +4,7 @@
 # useful for making your package executable from the command line, enabling
 # the python -m command to run your package as a script.
 
-from .main import main
+from python_template.main import main
 
 if __name__ == "__main__":
     main()

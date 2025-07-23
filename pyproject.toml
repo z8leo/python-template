@@ -19,6 +19,9 @@ dev = [
     "python-semantic-release>=9.8.6",
 ]
 
+[project.scripts]
+python_template = "python_template:main"
+
 [tool.ruff.lint]
 # pyflakes, pycodestyle, isort
 select = ["F", "E", "W", "I001"]
